@@ -7,7 +7,11 @@ const app = express();
 
 // Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true,
+    useNewUrlParser: true,
+    useCreateIndex: true 
 });
 
 const db = mongoose.connection;
